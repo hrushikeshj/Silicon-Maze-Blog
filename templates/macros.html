@@ -1,0 +1,14 @@
+{% macro card(title ,link ,img_url ,text, info) %}
+<div class="card " style="width: 18rem; margin: 4px;">
+  <a href="{{ link }}" target="_blank" class="card-title title-link">
+    <img src="{{ img_url if img_url is not none else 'static/noimg.png' }}" class="card-img-top" alt="...">
+  </a>
+  <div class="card-body">
+    <a href="{{ link }}" target="_blank" class="card-title title-link"><h5>{{ title }}</h5></a>
+    <p style="font-size: 13px; " class="card-text">{{ info }}</p>
+    {% if text != None %}
+      <p class="card-text">{{ text }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}
