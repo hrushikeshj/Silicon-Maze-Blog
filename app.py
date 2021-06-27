@@ -37,7 +37,7 @@ def posts(year=todays_date.year , month=todays_date.month):
         'month.html', ieee = ieee, pulse = pulse, iris = iris,
         pulse_url = PULSE_URL + str(year) + '/' + str(month),
         iris_url = IRIS_URL + str(year) + '/' + str(month),
-        month = calendar.month_name[int(month)] + str(year)
+        month = calendar.month_name[int(month)] + ' ' + str(year)
     )
 
 def pulse_article_data(article):
@@ -80,6 +80,8 @@ def iris_article_data(article):
     if link != None:
         data['link'] = link.get('href')
         data['img_url'] = article.find('a', class_='entry-thumbnail').img.get('src')
+    else:
+        data['link'] =  article.find('h2', class_='entry-title').a.get('href')
     data['info'] = article.find('div', class_='entry-meta').text.strip()
     data['text'] = article.find('div', class_='entry-content').text.strip()[:80] + '....'
     return data
