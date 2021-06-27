@@ -1,0 +1,133 @@
+{% from "macros.html" import card with context %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'slick/slick.css') }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'slick/slick-theme.css') }}"/>
+  <title>Blog</title>
+</head>
+<style>
+  body{
+    background-color: rgb(235, 234, 234);
+  }
+  .container{
+    height: 100%;
+  }
+  nav{
+    background-color: #b4e9e1;
+  }
+  .title-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .title-link:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+  }
+
+  .slick-prev:before, .slick-next:before{
+    color: #707070;
+    font-size: 30px;
+  }
+  .carousel-top h5, p{
+    color:rgb(51, 51, 51);
+  }
+  .car{
+    width: 60%;
+    margin: auto;
+  }
+  hr {
+  border-top: 3px solid #bbb;
+  }
+  .row{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    border: rgb(80, 79, 79) 1px solid
+  }
+
+</style>
+<body>
+  {% include "nav.html" %}
+  
+  <div class="container" style="background-color: white;">
+    <div class="tg-container">
+      <h1 class="page-title">Month: {{ month }}</h1>			
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="month" id="month" class="form-control">
+      </div>
+      <div class="col">
+        <button type="button" id="btn" class="btn btn-success">Search</button>
+      </div>
+    </div>
+    <h1 class="display-6">IRIS</h1><a href="{{ iris_url }}" target="_blank" class="card-title title-link">(see more)</a>
+    <div class="con p-1">
+      {% for article in iris %}
+        {{ card(**article) }}
+      {% endfor %}
+      {% if iris == [] %}
+        <p>No articles found</p>
+      {% endif %}
+    </div>
+
+    <hr class="divider">
+    <h1 class="display-6">Pulse</h1><a href="{{ pulse_url }}" target="_blank" class="card-title title-link">(see more)</a>
+    <div class="con p-1">
+      {% for article in pulse %}
+        {{ card(**article) }}
+      {% endfor %}
+      {% if pulse == [] %}
+        <p>No articles found</p>
+      {% endif %}
+    </div>
+
+    <hr class="divider">
+    <h1 class="display-6">IEEE</h1>
+    <div class="con p-1">
+      {% for article in ieee %}
+        {{ card(**article) }}
+      {% endfor %}
+      {% if ieee == [] %}
+        <p>No articles found</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/static/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.con').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 2
+        });
+        let month = document.querySelector('#month');
+        let btn = document.querySelector('#btn');
+        btn.addEventListener('click',()=>{
+          if(month.value == ''){
+            alert('invalid date');
+          }
+          else{
+            btn.disabled = true;
+            let date = month.value.split('-');
+            let m = date[1]
+            let y = date[0]
+            window.location.href = `/posts/${y}/${m}`;
+          }
+        });
+    });
+  </script>
+
+</body>
+</html>
