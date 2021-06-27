@@ -24,6 +24,7 @@
  ```
  Website should be running at [http://localhost:5000/](http://localhost:5000).
  
+ [Demo video](/Blog%20-%20Google%20Chrome.mp4)
 ![img](img/home.png)
 ![img](img/home2.png)
 ![img](img/month.png)
