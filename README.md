@@ -14,6 +14,7 @@
 
 ###  Setup Instructions
  ```
+ On windows
  git clone https://github.com/hrushikeshj/Silicon-Maze-Blog.git
  cd Silicon-Maze-Blog
  py -3 -m venv venv
@@ -21,6 +22,7 @@
  pip install flask bs4 requests
  flask run
  ```
+ Website should be running at [http://localhost:5000/](http://localhost:5000).
  
 ![img](img/home.png)
 ![img](img/home2.png)
