@@ -1,10 +1,13 @@
-# Silicon-Maze-Blog
+# One Blog To Rule Them All.
 # Team: Phoenix
 ### Task: Unified Blogs Platform
 ###  Features implemented
 * See the latest post from all three websites
 * See posts according to their month published
 * Carousel of three latest posts
+
+#### Project link
+[http://hrushi-flask.herokuapp.com/](http://hrushi-flask.herokuapp.com/)
 
 ### Tech Stack
 * Flask(v1.1.2)
