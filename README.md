@@ -1,4 +1,4 @@
-# One Blog To Rule Them All.
+# One Blog To Rule Them All
 # Team: Phoenix
 ### Task: Unified Blogs Platform
 ###  Features implemented
