@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from datetime import date, datetime
 import calendar
 
-url = 'https://assets.digitalocean.com/articles/eng_python/beautiful-soup/mockturtle.html'
 PULSE_URL = 'https://pulsenitk.in/'
 IRIS_URL = 'https://blog.iris.nitk.ac.in/'
 IEEE_BLOG_URL = 'https://ieee.nitk.ac.in/blog'
@@ -59,7 +58,7 @@ def pulse_article_data(article):
 #returns 10 latest 
 def get_pulse_latest(year = todays_date.year):
     pulse = []
-    pulse_page = requests.get(PULSE_URL + str(year) )
+    pulse_page = requests.get(PULSE_URL + str(year), verify=False)
     pulse_html = BeautifulSoup(pulse_page.text, 'html.parser')
     articles = pulse_html.find_all('article')
     for article in articles:
