@@ -14,7 +14,7 @@
 * Beautiful Soup4(v4.9.3)
 * Requests(v2.25.1)
 * Python(v3.9.1)
-
+__________________________
 ###  Setup Instructions
  ```
  On windows
@@ -26,7 +26,7 @@
  flask run
  ```
  Website should be running at [http://localhost:5000/](http://localhost:5000).
- 
+ ______________________
  [Demo video](/Blog%20-%20Google%20Chrome.mp4)
 ![img](img/home.png)
 ![img](img/home2.png)
