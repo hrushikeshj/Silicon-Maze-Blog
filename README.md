@@ -32,7 +32,3 @@ __________________________
 ![img](img/home.png)
 ![img](img/home2.png)
 ![img](img/month.png)
-
----
-layout: default
----
