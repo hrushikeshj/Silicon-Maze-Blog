@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # One Blog To Rule Them All
 # Team: Phoenix
 ### Task: Unified Blogs Platform
