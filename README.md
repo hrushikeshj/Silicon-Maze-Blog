@@ -1,13 +1,11 @@
 
-# One Blog To Rule Them All
+# Blog
 
-###  Features implemented
+###  Features
 * See the latest post from all three websites
 * See posts according to their month published
 * Carousel of three latest posts
 
-#### Project link
-[http://hrushi-flask.herokuapp.com/](http://hrushi-flask.herokuapp.com/)
 
 ### Tech Stack
 * Flask(v1.1.2)
@@ -17,7 +15,6 @@
 __________________________
 ###  Setup Instructions
  ```
- On windows
  git clone https://github.com/hrushikeshj/Silicon-Maze-Blog.git
  cd Silicon-Maze-Blog
  py -3 -m venv venv
