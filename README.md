@@ -7,12 +7,15 @@ Web application to view the latest blog posts from  [Pulse NITK](https://pulse.n
 * Carousel of three latest posts
 
 
+https://user-images.githubusercontent.com/66632353/177147542-6e58a33f-8605-4f81-99ab-3af68d1c6ae9.mp4
+
+-----------------------
 ### Tech Stack
 * Flask
 * Beautiful Soup4
 * Requests
 * Python
-__________________________
+
 ###  Setup Instructions
  ```
  git clone https://github.com/hrushikeshj/Silicon-Maze-Blog.git
@@ -24,10 +27,7 @@ __________________________
  ```
  Website should be running at [http://localhost:5000/](http://localhost:5000).
  ______________________
-
-
-https://user-images.githubusercontent.com/66632353/177147542-6e58a33f-8605-4f81-99ab-3af68d1c6ae9.mp4
-
-
+ 
+ 
 ![img](img/home2.png)
 ![img](img/month.png)
