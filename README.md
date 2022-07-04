@@ -1,5 +1,5 @@
 
-# Blog
+Web application to view the latest blog posts from  [Pulse NITK](https://pulse.nitk.ac.in/), [IRIS](https://blog.iris.nitk.ac.in/) and, [IEEE](https://ieee.nitk.ac.in/blog).
 
 ###  Features
 * See the latest post from all three websites
@@ -8,10 +8,10 @@
 
 
 ### Tech Stack
-* Flask(v1.1.2)
-* Beautiful Soup4(v4.9.3)
-* Requests(v2.25.1)
-* Python(v3.9.1)
+* Flask
+* Beautiful Soup4
+* Requests
+* Python
 __________________________
 ###  Setup Instructions
  ```
@@ -29,6 +29,5 @@ __________________________
 https://user-images.githubusercontent.com/66632353/177147542-6e58a33f-8605-4f81-99ab-3af68d1c6ae9.mp4
 
 
-![img](img/home.png)
 ![img](img/home2.png)
 ![img](img/month.png)
